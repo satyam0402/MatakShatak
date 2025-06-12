@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matak Shatak - Heritage Gifting Exhibition</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
-        
+
         * {
             margin: 0;
             padding: 0;
@@ -25,8 +26,15 @@
         }
 
         @keyframes gradientShift {
-            0%, 100% { background: linear-gradient(135deg, #FF6B35 0%, #F7931E 30%, #FFD23F 70%, #FF6B35 100%); }
-            50% { background: linear-gradient(135deg, #E91E63 0%, #FF5722 30%, #FF9800 70%, #FFC107 100%); }
+
+            0%,
+            100% {
+                background: linear-gradient(135deg, #FF6B35 0%, #F7931E 30%, #FFD23F 70%, #FF6B35 100%);
+            }
+
+            50% {
+                background: linear-gradient(135deg, #E91E63 0%, #FF5722 30%, #FF9800 70%, #FFC107 100%);
+            }
         }
 
         .container {
@@ -34,15 +42,22 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
             border-radius: 25px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
             overflow: hidden;
             position: relative;
             animation: float 6s ease-in-out infinite;
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(1deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-10px) rotate(1deg);
+            }
         }
 
         .mandala-bg {
@@ -56,8 +71,13 @@
         }
 
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .header {
@@ -80,8 +100,13 @@
         }
 
         @keyframes patternMove {
-            0% { transform: translateX(0) translateY(0); }
-            100% { transform: translateX(60px) translateY(60px); }
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+
+            100% {
+                transform: translateX(60px) translateY(60px);
+            }
         }
 
         .brand-name {
@@ -89,7 +114,7 @@
             font-size: 3.5rem;
             font-weight: 700;
             color: #FFD700;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
             margin-bottom: 10px;
             position: relative;
             z-index: 2;
@@ -97,8 +122,13 @@
         }
 
         @keyframes glow {
-            from { text-shadow: 3px 3px 6px rgba(0,0,0,0.3), 0 0 20px rgba(255,215,0,0.5); }
-            to { text-shadow: 3px 3px 6px rgba(0,0,0,0.3), 0 0 30px rgba(255,215,0,0.8); }
+            from {
+                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.5);
+            }
+
+            to {
+                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 215, 0, 0.8);
+            }
         }
 
         .tagline {
@@ -112,8 +142,15 @@
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .main-content {
@@ -132,24 +169,40 @@
         }
 
         @keyframes slideInFromLeft {
-            from { opacity: 0; transform: translateX(-50px); }
-            to { opacity: 1; transform: translateX(0); }
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         .description {
-            font-size: 1.3rem;
+            font-family: 'Cinzel', serif;
+            font-weight: 500;
+            font-size: 1.2rem;
             color: #444;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            max-width: 600px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            max-width: 1000px;
             margin-left: auto;
             margin-right: auto;
-            animation: slideInFromRight 1s ease-out 0.3s both;
+            animation: slideInFromRight 1s ease-out 0.2s both;
         }
 
         @keyframes slideInFromRight {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         .products-showcase {
@@ -169,19 +222,24 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(218,165,32,0.1) 0%, transparent 50%);
+            background: radial-gradient(circle, rgba(218, 165, 32, 0.1) 0%, transparent 50%);
             animation: shimmer 8s linear infinite;
         }
 
         @keyframes shimmer {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .products-title {
             font-family: 'Cinzel', serif;
             font-size: 2rem;
-            color: #8B4513;
+            color: #8B0000;
             text-align: center;
             margin-bottom: 25px;
             position: relative;
@@ -201,21 +259,24 @@
             padding: 20px;
             border-radius: 12px;
             text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             border: 1px solid #E6E6FA;
         }
 
         .product-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
             border-color: #DAA520;
         }
 
-        .product-icon {
-            font-size: 2.5rem;
+        .product-icon img {
+            width: 60px;
+            /* tweak up/down as you like */
+            height: 60px;
+            object-fit: contain;
             margin-bottom: 10px;
-            animation: bounce 2s infinite;
+            /* keeps spacing like the emoji */
         }
 
         .product-name {
@@ -241,8 +302,13 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         .product-preview {
@@ -270,7 +336,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
             transition: left 0.5s;
         }
 
@@ -280,7 +346,7 @@
 
         .artform-card:hover {
             transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 15px 30px rgba(218,165,32,0.3);
+            box-shadow: 0 15px 30px rgba(218, 165, 32, 0.3);
             border-color: #B8860B;
         }
 
@@ -298,13 +364,20 @@
             padding: 40px;
             margin: 30px 0;
             border-radius: 20px;
-            box-shadow: inset 0 0 50px rgba(0,0,0,0.2);
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2);
             animation: pulseGlow 4s ease-in-out infinite;
         }
 
         @keyframes pulseGlow {
-            0%, 100% { box-shadow: inset 0 0 50px rgba(0,0,0,0.2), 0 0 20px rgba(52,73,94,0.3); }
-            50% { box-shadow: inset 0 0 50px rgba(0,0,0,0.2), 0 0 40px rgba(52,73,94,0.6); }
+
+            0%,
+            100% {
+                box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2), 0 0 20px rgba(52, 73, 94, 0.3);
+            }
+
+            50% {
+                box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2), 0 0 40px rgba(52, 73, 94, 0.6);
+            }
         }
 
         .event-info {
@@ -333,8 +406,15 @@
         }
 
         @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
         }
 
         .info-text {
@@ -348,8 +428,15 @@
         }
 
         @keyframes zoomIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         .instagram-button {
@@ -362,7 +449,7 @@
             border-radius: 25px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(196,53,132,0.3);
+            box-shadow: 0 8px 20px rgba(196, 53, 132, 0.3);
             text-transform: none;
             letter-spacing: 0.5px;
             position: relative;
@@ -376,7 +463,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transition: left 0.5s;
         }
 
@@ -386,7 +473,7 @@
 
         .instagram-button:hover {
             transform: translateY(-2px) scale(1.03);
-            box-shadow: 0 12px 25px rgba(196,53,132,0.4);
+            box-shadow: 0 12px 25px rgba(196, 53, 132, 0.4);
         }
 
         .cta-button {
@@ -399,7 +486,7 @@
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(255,107,53,0.3);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
             text-transform: uppercase;
             letter-spacing: 1px;
             position: relative;
@@ -413,7 +500,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transition: left 0.5s;
         }
 
@@ -423,7 +510,7 @@
 
         .cta-button:hover {
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(255,107,53,0.4);
+            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
         }
 
         .decorative-border {
@@ -433,35 +520,148 @@
         }
 
         @keyframes borderShimmer {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 200% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 200% 50%;
+            }
         }
 
         @media (max-width: 768px) {
-            .brand-name { font-size: 2.5rem; }
-            .exhibition-title { font-size: 2rem; }
-            .description { font-size: 1.1rem; }
-            .main-content { padding: 30px 20px; }
-            .header { padding: 30px 20px; }
-            .event-details { padding: 25px; }
+            .brand-name {
+                font-size: 2.5rem;
+            }
+
+            .exhibition-title {
+                font-size: 2rem;
+            }
+
+            .description {
+                font-size: 1.1rem;
+            }
+
+            .main-content {
+                padding: 30px 20px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .event-details {
+                padding: 25px;
+            }
+        }
+
+        .products-showcase {
+            margin: 70px 0;
+            background: linear-gradient(135deg, #fef9e7, #fdf2d6);
+            padding: 60px 40px;
+            border-radius: 26px;
+            border: 2px solid #d4af37;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, .08);
+        }
+
+        .products-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.0rem;
+            text-align: center;
+            color: #640000;
+            margin-bottom: 45px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+        }
+
+        .product-item {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, .09);
+            transition: transform .3s, box-shadow .3s;
+            border: 1px solid #f0e6ca;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .product-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 18px 36px rgba(0, 0, 0, .12);
+        }
+
+        /* Default photo behaviour */
+        .product-photo{
+        width:100%;
+        aspect-ratio:1/1;      /* square window for uniformity */
+        object-fit:cover;      /* fill, crop excess */
+        object-position:center;
+        display:block;
+    }
+
+        /* For images that need full view without crop */
+        .product-photo.contain {
+            object-fit: contain;
+            background: #ffffff;
+            height: auto;
+            /* let natural height show */
+            aspect-ratio: auto;
+            /* override fixed ratio */
+        }
+
+        .product-caption {
+            padding: 16px 14px 22px;
+            text-align: center;
+            flex: 1;
+        }
+
+        .product-name {
+            font-weight: 700;
+            color: #8B0000;
+            font-size: 1.15rem;
+            margin-bottom: 4px;
+        }
+
+        .product-detail {
+            font-size: .85rem;
+            color: #555;
+            line-height: 1.35;
+        }
+
+        @media(max-width:550px) {
+            .product-name {
+                font-size: 1.05rem;
+            }
+
+            .product-detail {
+                font-size: .8rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="decorative-border"></div>
-        
+
         <div class="mandala-bg">
             <svg viewBox="0 0 100 100" fill="currentColor">
-                <circle cx="50" cy="50" r="2"/>
-                <circle cx="50" cy="40" r="2"/>
-                <circle cx="50" cy="60" r="2"/>
-                <circle cx="40" cy="50" r="2"/>
-                <circle cx="60" cy="50" r="2"/>
-                <circle cx="45" cy="45" r="1"/>
-                <circle cx="55" cy="45" r="1"/>
-                <circle cx="45" cy="55" r="1"/>
-                <circle cx="55" cy="55" r="1"/>
+                <circle cx="50" cy="50" r="2" />
+                <circle cx="50" cy="40" r="2" />
+                <circle cx="50" cy="60" r="2" />
+                <circle cx="40" cy="50" r="2" />
+                <circle cx="60" cy="50" r="2" />
+                <circle cx="45" cy="45" r="1" />
+                <circle cx="55" cy="45" r="1" />
+                <circle cx="45" cy="55" r="1" />
+                <circle cx="55" cy="55" r="1" />
             </svg>
         </div>
 
@@ -473,54 +673,59 @@
         <main class="main-content">
             <h2 class="exhibition-title">The Art of Gifting</h2>
             <p class="description">
-                Experience the fusion of traditional Indian artforms with contemporary gifting solutions. 
-                Discover exquisite packaging that transforms every gift into a work of art, celebrating 
-                India's rich cultural heritage through modern design excellence.
+                Experience the fusion of traditional Indian Artforms with contemporary gifting solutions.
+                Discover exquisite ideas that transforms every gift into a work of art,
+                celebrating India's rich cultural heritage through modern design excellence.
             </p>
 
             <div class="products-showcase">
                 <h3 class="products-title">Our Exclusive Product Range</h3>
                 <div class="products-grid">
+                    <!-- 1 cover (default) -->
                     <div class="product-item">
-                        <div class="product-icon">💰</div>
-                        <div class="product-name">Money Envelopes & Gift Cards</div>
+                        <img src="images/1.jpeg" alt="Personalised Stationery" class="product-photo">
+                        <div class="product-caption">
+                            <div class="product-name">Personalised Stationery</div>
+                            <div class="product-detail">Money Envelopes and Gift Cards</div>
+                        </div>
                     </div>
+                    <!-- 3 cover (looks good) -->
                     <div class="product-item">
-                        <div class="product-icon">🍽️</div>
-                        <div class="product-name">Table Decor Collection</div>
-                        <div class="product-detail">Table mats, Trivets, Coasters, Napkin holders</div>
+                        <img src="images/3.jpeg" alt="Quirky Stands" class="product-photo">
+                        <div class="product-caption">
+                            <div class="product-name">Quirky Stands</div>
+                            <div class="product-detail">Phone Stands, Towel Stands, Book Stands</div>
+                        </div>
                     </div>
+                    <!-- 2 use contain -->
                     <div class="product-item">
-                        <div class="product-icon">📱</div>
-                        <div class="product-name">Quirky Stands</div>
-                        <div class="product-detail">Phone stands & Towel stands</div>
+                        <img src="images/2.jpeg" alt="Table Decor Collection" class="product-photo contain">
+                        <div class="product-caption">
+                            <div class="product-name">Table Decor Collection</div>
+                            <div class="product-detail">Table mats, Trivets, Coasters, Napkin holders</div>
+                        </div>
                     </div>
+                    <!-- 4 use contain -->
                     <div class="product-item">
-                        <div class="product-icon">🔑</div>
-                        <div class="product-name">Accessories</div>
-                        <div class="product-detail">Fridge magnets & Key chains</div>
+                        <img src="images/4.jpeg" alt="Small Little Things" class="product-photo contain">
+                        <div class="product-caption">
+                            <div class="product-name">Small Little Things</div>
+                            <div class="product-detail">Fridge Magnets, Key Chains, Bookmarks</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="artforms-grid">
-                <div class="artform-card">
-                    <div class="artform-name">Madhubani</div>
-                </div>
-                <div class="artform-card">
-                    <div class="artform-name">Warli</div>
-                </div>
-                <div class="artform-card">
-                    <div class="artform-name">Kalamkari</div>
-                </div>
-                <div class="artform-card">
-                    <div class="artform-name">Pichwai</div>
-                </div>
-                <div class="artform-card">
-                    <div class="artform-name">Pattachitra</div>
-                    <div class="product-preview">✉️ Premium Envelopes</div>
-                </div>
-            </div>
+
+            <section style="text-align:center; margin:50px 0; font-family:'Cinzel', serif;">
+                <h2
+                    style="font-size:2.0rem; color:#8B0000; font-weight:700; margin-bottom:12px; text-transform:uppercase; letter-spacing:1px;">
+                    Artworks We Love Working In
+                </h2>
+                <p style="font-size:1.2rem; font-weight:700; color:#444; letter-spacing:0.6px;">
+                    Madhubani, Kalamkari, Warli, Pichwai, Pattachitra, Ajrak
+                </p>
+            </section>
 
             <div class="event-details">
                 <div class="event-info">
@@ -539,20 +744,12 @@
                             Birla Auditorium, Jaipur
                         </div>
                     </div>
-                    <div class="info-item">
-                        <div class="info-icon">🎁</div>
-                        <div class="info-text">
-                            <strong>Special Features</strong><br>
-                            Live artisan demonstrations<br>
-                            Custom packaging solutions
-                        </div>
-                    </div>
-                    <div class="info-item">
+                    <div class="info-item" style="grid-column: span 2;">
                         <div class="info-icon">🏆</div>
                         <div class="info-text">
                             <strong>Exclusive Collection</strong><br>
-                            Limited edition designs<br>
-                            Artisan collaborations
+                            We love creating, which you would love using.<br>
+                            Our collection blends tradition with modernity.
                         </div>
                     </div>
                 </div>
@@ -560,15 +757,19 @@
 
             <div class="cta-section">
                 <button class="cta-button" onclick="window.open('tel:+919810620336', '_self')">
-                    Reserve Your Spot
+                    Awaiting your kind presence and support
                 </button>
                 <div style="margin-top: 25px;">
-                    <button class="instagram-button" onclick="window.open('https://instagram.com/matakshatak', '_blank')">
+                    <button class="instagram-button"
+                        onclick="window.open('https://instagram.com/matakshatak', '_blank')">
                         📱 Follow us on Instagram @matakshatak
                     </button>
                 </div>
                 <p style="margin-top: 15px; color: #666; font-style: italic;">
-                    For enquiries: +91 98106 20336
+                    For enquiries: +91 98106 20336 <br>
+                    For orders: +918851069926
+
+
                 </p>
             </div>
         </main>
@@ -590,9 +791,9 @@
             sparkle.style.left = Math.random() * window.innerWidth + 'px';
             sparkle.style.top = Math.random() * window.innerHeight + 'px';
             sparkle.style.animation = 'sparkleAnimation 2s linear forwards';
-            
+
             document.body.appendChild(sparkle);
-            
+
             setTimeout(() => {
                 sparkle.remove();
             }, 2000);
@@ -624,4 +825,5 @@
         });
     </script>
 </body>
+
 </html>
