@@ -649,34 +649,47 @@
 <style>
     /* already‑defined styles above stay unchanged */
 
-    /* Make the dark event card fit small screens */
-    @media(max-width:600px){
-        .event-details{
-            padding:28px 22px;
-        }
-        .event-info{
-            grid-template-columns:1fr;   /* stack items vertical */
-            gap:22px;
-        }
-        .info-item{
-            align-items:flex-start;
-        }
-        /* Slightly smaller product titles */
-        .product-name{
-            font-size:1.05rem;
-        }
-        /* Tighten button and caption padding */
-        .product-caption{
-            padding:14px 12px 20px;
-        }
+/* ≤ 600 px  – phones */
+@media (max-width:600px){
+        /* BODY */
+        body{padding:14px;}
+
+        /* MAIN CONTAINER */
+        .container{max-width:100%; border-radius:18px;}
+
+        /* HEADER type scaling */
+        .brand-name{font-size:2rem;}
+        .exhibition-title{font-size:1.7rem;}
+        .products-title{font-size:1.6rem;}
+
+        /* EVENT CARD */
+        .event-details{padding:22px 18px; margin-bottom:24px;}
+        .event-info{grid-template-columns:1fr; gap:20px;}
+        .info-item{align-items:flex-start; gap:12px;}
+        .info-icon{width:32px; height:32px; font-size:0.9rem;}
+        .info-text{font-size:0.95rem; line-height:1.45;}
+
+        /* CTA BUTTONS */
+        .cta-button,
+        .instagram-button{padding:14px 22px; font-size:1rem;}
+
+        /* PRODUCT GRID */
+        .products-grid{grid-template-columns:1fr;} /* single column */
+        .product-item{margin:0 auto; max-width:340px;}
+        .product-photo{aspect-ratio:1/1; object-fit:cover;}
+        .product-caption{padding:14px 12px 20px;}
+        .product-name{font-size:1.1rem;}
+        .product-detail{font-size:0.8rem;}
     }
 
-    /* Ensure overall body padding on very narrow screens */
-    @media(max-width:430px){
-        body{
-            padding:12px;
-        }
+    /* ≤ 430 px  – very small phones */
+    @media (max-width:430px){
+        .brand-name{font-size:1.8rem;}
+        .cta-button,
+        .instagram-button{padding:12px 18px; font-size:0.95rem;}
+        .event-details{padding:18px 14px;}
     }
+</style>
 </style>
 
 </head>
