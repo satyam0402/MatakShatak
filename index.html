@@ -689,6 +689,72 @@
         .instagram-button{padding:12px 18px; font-size:0.95rem;}
         .event-details{padding:18px 14px;}
     }
+
+     /* CENTER align contact lines */
+     .cta-section p{
+        text-align:left;     /* left‑align so both lines start flush */
+        line-height:1.5;
+        margin-top: 10px;
+        white-space:normal;  /* allow wrapping if needed */
+    }
+    /* Contact line flex layout */
+    .contact-lines{
+    display:flex;
+    flex-wrap:nowrap;          /* keep everything on a single row */
+    justify-content:center;    /* centred inside container        */
+    align-items:center;        /* vertical baseline alignment      */
+    gap:8px;                   /* space around divider             */
+    line-height:1.5;
+    margin:14px 0 0;           /* breathing room                   */
+    white-space:nowrap;        /* prevent phone numbers breaking   */
+    font-size:1rem;
+}
+.contact-lines .label{font-weight:600; color:#000;}
+.contact-lines .divider{color:#7a7a7a;}
+.contact-lines a{color:#0077ff; text-decoration:none;}
+.contact-lines a:hover{text-decoration:underline;}
+
+/* ------------- MOBILE ≤ 600 px ------------- */
+@media (max-width:600px){
+    body{padding:14px;}
+
+    /* container adjustments */
+    .container{max-width:100%; border-radius:18px;}
+
+    /* headings */
+    .brand-name{font-size:2rem;}
+    .exhibition-title{font-size:1.7rem;}
+    .products-title{font-size:1.6rem;}
+
+    /* event card */
+    .event-details{padding:22px 18px; margin-bottom:24px;}
+    .event-info{grid-template-columns:1fr; gap:20px;}
+    .info-item{align-items:flex-start; gap:12px;}
+    .info-icon{width:32px; height:32px; font-size:0.9rem;}
+    .info-text{font-size:0.95rem; line-height:1.45;}
+
+    /* buttons */
+    .cta-button,
+    .instagram-button{padding:14px 22px; font-size:1rem;}
+
+    /* product grid */
+    .products-grid{grid-template-columns:1fr;}
+    .product-item{margin:0 auto; max-width:340px;}
+    .product-photo{aspect-ratio:1/1; object-fit:cover;}
+    .product-caption{padding:14px 12px 20px;}
+    .product-name{font-size:1.1rem;}
+    .product-detail{font-size:0.8rem;}
+
+    /* contact line – shrink font/gaps to fit every phone width */
+    .contact-lines{gap:6px; font-size:0.92rem;}
+    .contact-lines .label{font-size:0.92rem;}
+}
+
+/* ------------- XS PHONES ≤ 430 px ------------- */
+@media (max-width:430px){
+    .contact-lines{font-size:0.85rem; gap:4px;}
+    .contact-lines .label{font-size:0.85rem;}
+}
 </style>
 </style>
 
@@ -714,7 +780,7 @@
 
         <header class="header">
             <h1 class="brand-name">Matak Shatak</h1>
-            <p class="tagline">Heritage Gifting & Packaging Solutions</p>
+            <p class="tagline">Where Tradition meets Modernity</p>
         </header>
 
         <main class="main-content">
@@ -812,12 +878,12 @@
                         📱 Follow us on Instagram @matakshatak
                     </button>
                 </div>
-                <p style="margin-top: 15px; color: #666; font-style: italic;">
-                    For enquiries: +91 98106 20336 <br>
-                    For orders: +918851069926
-
-
-                </p>
+                <p class="contact-lines">
+                    <span class="label">For enquiries:</span>
+                    <a href="tel:+919810620336">+91&nbsp;98106&nbsp;20336</a>
+                    <span class="divider">|</span>
+                    <a href="tel:+918851069926">+91&nbsp;88510&nbsp;69926</a>
+                  </p>
             </div>
         </main>
 
