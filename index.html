@@ -645,6 +645,40 @@
             }
         }
     </style>
+
+<style>
+    /* already‑defined styles above stay unchanged */
+
+    /* Make the dark event card fit small screens */
+    @media(max-width:600px){
+        .event-details{
+            padding:28px 22px;
+        }
+        .event-info{
+            grid-template-columns:1fr;   /* stack items vertical */
+            gap:22px;
+        }
+        .info-item{
+            align-items:flex-start;
+        }
+        /* Slightly smaller product titles */
+        .product-name{
+            font-size:1.05rem;
+        }
+        /* Tighten button and caption padding */
+        .product-caption{
+            padding:14px 12px 20px;
+        }
+    }
+
+    /* Ensure overall body padding on very narrow screens */
+    @media(max-width:430px){
+        body{
+            padding:12px;
+        }
+    }
+</style>
+
 </head>
 
 <body>
